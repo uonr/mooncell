@@ -6,4 +6,9 @@
 
   # https://github.com/NixOS/nixpkgs/issues/109387
   networking.dhcpcd.denyInterfaces = [ "veth*" ];
+
+  networking.firewall.interfaces."podman+" = {
+    allowedUDPPorts = [ 53 ];
+    allowedTCPPorts = [ 53 ];
+  };
 }
