@@ -6,6 +6,6 @@
     programs.nix-ld.enable = true;
     programs.mosh.enable = true;
     environment.systemPackages = with pkgs; [ wget git nil nixfmt htop tmux ];
-    documentation.enable = false;
+    # documentation.enable = false;
   };
 }
