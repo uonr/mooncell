@@ -4,7 +4,7 @@
     autoPrune.enable = true;
   };
 
-  # https://github.com/NixOS/nixpkgs/issues/109387
+  # https://github.com/NixOS/nixpkgs/issues/109389
   networking.dhcpcd.denyInterfaces = [ "veth*" ];
 
   networking.firewall.interfaces."podman+" = {
