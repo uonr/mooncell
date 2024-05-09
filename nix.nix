@@ -1,6 +1,5 @@
 { pkgs, ... }: {
   nix = {
-    package = pkgs.nixVersions.nix_2_16;
     gc = {
       automatic = true;
       dates = "Wed";
