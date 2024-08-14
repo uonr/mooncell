@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   nix = {
     gc = {
       automatic = true;
@@ -12,7 +13,6 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
-    channel.enable = false;
   };
   programs.command-not-found.enable = false;
 }
