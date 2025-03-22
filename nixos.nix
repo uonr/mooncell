@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
     ./nix.nix
@@ -18,5 +18,12 @@
       htop
       tmux
     ];
+
+    services.journald.extraConfig = lib.mkDefault ''
+      SystemMaxUse=500M
+      RuntimeMaxUse=100M
+      SystemMaxFileSize=50M
+      RuntimeMaxFileSize=20M
+    '';
   };
 }
