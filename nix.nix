@@ -11,7 +11,7 @@
       allowed-users = [ "@wheel" ];
     };
     extraOptions = ''
-      experimental-features = nix-command flakes
+      experimental-features = nix-command flakes ca-derivations
     '';
   };
   programs.command-not-found.enable = false;
