@@ -17,6 +17,7 @@
       git
       htop
       tmux
+      ghostty.terminfo
     ];
 
     services.journald.extraConfig = lib.mkDefault ''
